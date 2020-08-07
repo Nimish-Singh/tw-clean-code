@@ -17,15 +17,20 @@ public class Movie {
     return priceCode;
   }
 
-  public void setPriceCode(int arg) {
-    priceCode = arg;
-  }
-
   public String getTitle() {
     return title;
   }
 
   public boolean isNewRelease() {
     return priceCode == NEW_RELEASE;
+  }
+
+  PriceCode priceCode() {
+    switch (priceCode) {
+      case REGULAR: return new RegularPriceCode();
+      case NEW_RELEASE: return new NewReleasePriceCode();
+      case CHILDRENS: return new ChildrensPriceCode();
+      default: return new DefaultPriceCode();
+    }
   }
 }

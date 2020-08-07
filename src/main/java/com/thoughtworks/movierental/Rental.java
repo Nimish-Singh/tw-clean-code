@@ -17,12 +17,7 @@ public class Rental {
   }
 
   public double amount() {
-    switch (movie.getPriceCode()) {
-      case Movie.REGULAR: return new RegularPriceCode().amountFor(daysRented);
-      case Movie.NEW_RELEASE: return new NewReleasePriceCode().amountFor(daysRented);
-      case Movie.CHILDRENS: return new ChildrensPriceCode().amountFor(daysRented);
-      default: return 0;
-    }
+    return movie.priceCode().amountFor(daysRented);
   }
 
   public int frequentRenterPoints() {
