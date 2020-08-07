@@ -13,11 +13,7 @@ public class Movie {
     this.priceCode = priceCode;
   }
 
-  public int getPriceCode() {
-    return priceCode;
-  }
-
-  public String getTitle() {
+  String getTitle() {
     return title;
   }
 
