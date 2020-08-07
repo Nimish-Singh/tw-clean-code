@@ -1,6 +1,6 @@
 package com.thoughtworks.movierental;
 
-public class TextStatement {
+class TextStatement {
     private final String name;
     private final Rentals rentals;
 

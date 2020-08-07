@@ -4,7 +4,6 @@ public class HtmlStatement {
     private final String name;
     private final Rentals rentals;
 
-
     public HtmlStatement(String name, Rentals rentals) {
         this.name = name;
         this.rentals = rentals;

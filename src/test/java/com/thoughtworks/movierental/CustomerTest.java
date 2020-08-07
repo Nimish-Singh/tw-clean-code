@@ -8,9 +8,9 @@ public class CustomerTest {
     @Test
     public void shouldReturnTextStatement() {
         Customer customer = new Customer("John");
-        Rental rental = new Rental(new Movie("Jurassic park", 0), 3);
-        Rental anotherRental = new Rental(new Movie("Jurassic park 2", 1), 4);
-        Rental oneMoreRental = new Rental(new Movie("Jurassic park 3", 2), 5);
+        Rental rental = new Rental(new Movie("Jurassic park", Movie.REGULAR), 3);
+        Rental anotherRental = new Rental(new Movie("Jurassic park 2", Movie.NEW_RELEASE), 4);
+        Rental oneMoreRental = new Rental(new Movie("Jurassic park 3", Movie.CHILDRENS), 5);
         customer.addRental(rental);
         customer.addRental(anotherRental);
         customer.addRental(oneMoreRental);
@@ -30,9 +30,9 @@ public class CustomerTest {
     @Test
     public void shouldReturnTextStatementWhenBluRayMovieIsRented() {
         Customer customer = new Customer("John");
-        Rental rental = new Rental(new Movie("Jurassic park", 0), 3);
-        Rental anotherRental = new Rental(new Movie("Jurassic park 2", 1), 4);
-        Rental oneMoreRental = new Rental(new Movie("Jurassic park 3", 3), 5);
+        Rental rental = new Rental(new Movie("Jurassic park", Movie.REGULAR), 3);
+        Rental anotherRental = new Rental(new Movie("Jurassic park 2", Movie.NEW_RELEASE), 4);
+        Rental oneMoreRental = new Rental(new Movie("Jurassic park 3", Movie.BLU_RAY), 5);
         customer.addRental(rental);
         customer.addRental(anotherRental);
         customer.addRental(oneMoreRental);
@@ -52,9 +52,9 @@ public class CustomerTest {
     @Test
     public void shouldReturnHTMLStatement() {
         Customer customer = new Customer("John");
-        Rental rental = new Rental(new Movie("Jurassic park", 0), 3);
-        Rental anotherRental = new Rental(new Movie("Jurassic park 2", 1), 4);
-        Rental oneMoreRental = new Rental(new Movie("Jurassic park 3", 2), 5);
+        Rental rental = new Rental(new Movie("Jurassic park", Movie.REGULAR), 3);
+        Rental anotherRental = new Rental(new Movie("Jurassic park 2", Movie.NEW_RELEASE), 4);
+        Rental oneMoreRental = new Rental(new Movie("Jurassic park 3", Movie.CHILDRENS), 5);
         customer.addRental(rental);
         customer.addRental(anotherRental);
         customer.addRental(oneMoreRental);

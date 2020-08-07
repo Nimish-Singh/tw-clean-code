@@ -1,7 +1,6 @@
 package com.thoughtworks.movierental;
 
 import java.util.ArrayList;
-import java.util.List;
 
 class Rentals extends ArrayList<Rental> {
     double totalAmount() {

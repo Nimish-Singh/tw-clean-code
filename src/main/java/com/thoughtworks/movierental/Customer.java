@@ -1,10 +1,11 @@
 package com.thoughtworks.movierental;
 
 public class Customer {
-  public static final String RENTAL_RECORD_FOR = "Rental Record for ";
-  public static final String AMOUNT_OWED_IS = "Amount owed is ";
-  public static final String YOU_EARNED = "You earned ";
-  public static final String FREQUENT_RENTER_POINTS = " frequent renter points";
+  static final String RENTAL_RECORD_FOR = "Rental Record for ";
+  static final String AMOUNT_OWED_IS = "Amount owed is ";
+  static final String YOU_EARNED = "You earned ";
+  static final String FREQUENT_RENTER_POINTS = " frequent renter points";
+
   private final Rentals rentals = new Rentals();
   private String name;
 
@@ -24,4 +25,3 @@ public class Customer {
     return new HtmlStatement(name, rentals).htmlStatement();
   }
 }
-
