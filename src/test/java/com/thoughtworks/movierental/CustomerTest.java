@@ -28,6 +28,28 @@ public class CustomerTest {
     }
 
     @Test
+    public void shouldReturnTextStatementWhenBluRayMovieIsRented() {
+        Customer customer = new Customer("John");
+        Rental rental = new Rental(new Movie("Jurassic park", 0), 3);
+        Rental anotherRental = new Rental(new Movie("Jurassic park 2", 1), 4);
+        Rental oneMoreRental = new Rental(new Movie("Jurassic park 3", 3), 5);
+        customer.addRental(rental);
+        customer.addRental(anotherRental);
+        customer.addRental(oneMoreRental);
+
+        String expectedOutput = "Rental Record for John\n" +
+                "\tJurassic park\t3.5\n" +
+                "\tJurassic park 2\t12.0\n" +
+                "\tJurassic park 3\t20.0\n" +
+                "Amount owed is 35.5\n" +
+                "You earned 6 frequent renter points";
+
+        String receivedStatement = customer.statement();
+
+        assertEquals(expectedOutput, receivedStatement);
+    }
+
+    @Test
     public void shouldReturnHTMLStatement() {
         Customer customer = new Customer("John");
         Rental rental = new Rental(new Movie("Jurassic park", 0), 3);

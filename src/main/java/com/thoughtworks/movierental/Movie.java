@@ -4,6 +4,7 @@ public class Movie {
   public static final int CHILDRENS = 2;
   public static final int REGULAR = 0;
   public static final int NEW_RELEASE = 1;
+  public static final int BLU_RAY = 3;
 
   private String title;
   private int priceCode;
@@ -17,15 +18,12 @@ public class Movie {
     return title;
   }
 
-  public boolean isNewRelease() {
-    return priceCode == NEW_RELEASE;
-  }
-
   PriceCode priceCode() {
     switch (priceCode) {
       case REGULAR: return new RegularPriceCode();
       case NEW_RELEASE: return new NewReleasePriceCode();
       case CHILDRENS: return new ChildrensPriceCode();
+      case BLU_RAY: return new BluRayPriceCode();
       default: return new DefaultPriceCode();
     }
   }
